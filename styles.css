@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #fff1f5, #fdf2f8);
+  color: #4a2c2a;
+  text-align: center;
+}
+
+/* HERO */
+.hero {
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #9d174d;
+}
+
+.handwriting {
+  font-family: 'Playfair Display', cursive;
+  font-size: 2.2rem;
+  color: #b8326a;
+  margin-top: 15px;
+  animation: write 3s ease forwards;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #b8326a;
+  width: 0;
+}
+
+@keyframes write {
+  to { width: 100%; border-right: none; }
+}
+
+.nickname {
+  opacity: 0.8;
+  margin-top: 5px;
+}
+
+.hero span {
+  display: block;
+  margin-top: 10px;
+  opacity: 0.7;
+}
+
+/* LETTER */
+.letter-section {
+  padding: 60px 20px;
+}
+
+.heart {
+  font-size: 3rem;
+  cursor: pointer;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+.letter {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.hidden {
+  display: none;
+}
+
+/* GALLERY */
+.gallery {
+  padding: 60px 20px;
+}
+
+.slideshow {
+  max-width: 520px;
+  margin: auto;
+  position: relative;
+}
+
+.slide {
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide img,
+.slide video {
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* SECTIONS */
+section {
+  animation: fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reasons,
+.future,
+.closing {
+  padding: 60px 20px;
+}
+
+.reasons ul {
+  list-style: none;
+}
+
+.reasons li {
+  padding: 10px;
+}
+
+/* FOOTER */
+footer {
+  padding: 30px;
+  opacity: 0.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 2.2rem; }
+  .handwriting { font-size: 1.8rem; }
+}
+/*mobile adjustments*/
+@media (max-width: 480px) {
+  .letter {
+    padding: 20px;
+  }
+  .reasons,
+  .future,
+  .closing {
+    padding: 40px 15px;
+  }
+}
